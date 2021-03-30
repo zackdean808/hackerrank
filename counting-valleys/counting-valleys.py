@@ -16,16 +16,22 @@ import sys
 #
 def countingValleys(steps, path):
     # Write your code here
-    # cU = countUps
-    # cD = countDowns
-    cU = 0
-    cD = 0
-    for s in len(path):
-        if s == "U":
-            cU += 1
-        if s == "D":
-            cD += 1
-    return int(cU - cD)
+    # cS = countSteps 
+    # cV = countValleys 
+    cS = 0
+    cV = 0 
+    for c in path:
+        #print (c)
+        if c == "U":
+            cS += 1
+            #print ("Up")
+        if c == "D":
+            cS -= 1
+            #print ("Down")
+        if cS == 0 and c == "U":
+            cV += 1 
+            #print("valley") 
+    return int(cV)
 
 if __name__ == '__main__':
     #fptr = open(os.environ['OUTPUT_PATH'], 'w')
