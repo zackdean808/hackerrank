@@ -6,6 +6,13 @@ pattern = "[a-zA-Z0-9-_]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,3}"
 
 def fun(s):
     # return True if s is a valid email, else return False
+    #lf = lambda x: re.match(pattern, s)
+    if re.match(pattern, s):
+        return True
+    elif not re.match(pattern, s):
+        return False
+    else:
+        sys.exit(1)
 
 def filter_mail(emails):
     return list(filter(fun, emails))
