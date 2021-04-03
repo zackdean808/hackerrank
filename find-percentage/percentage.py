@@ -1,11 +1,7 @@
 #!/bin/python
-
-def generateAverage(sm, qName):
-    avg = 0.00 
-    
-    return avg 
-
 if __name__ == '__main__':
+    avg_total = 0.00 
+    avg = 0.00 
     n = int(input())
     student_marks = {}
     average = []
@@ -15,5 +11,8 @@ if __name__ == '__main__':
         student_marks[name] = scores
     query_name = input()
     
-    
+    for s in student_marks[query_name]:
+        avg_total += float(s)
 
+    avg = avg_total / len(student_marks[query_name]) 
+    print ("{:.2f}".format(avg))
