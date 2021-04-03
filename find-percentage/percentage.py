@@ -16,3 +16,5 @@ if __name__ == '__main__':
 
     avg = avg_total / len(student_marks[query_name]) 
     print ("{:.2f}".format(avg))
+
+
