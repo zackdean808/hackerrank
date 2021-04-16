@@ -7,7 +7,7 @@ if __name__ == '__main__':
     pop = "pop" 
     reverse = "reverse" 
     remove = "remove"
-    i = [] 
+    l = [] 
     tempList = [] 
 
     # Read in the times to run the foor loop 
@@ -17,19 +17,29 @@ if __name__ == '__main__':
         line = str(input())
 
         if append in line:
-            print ("appened") 
+            #print ("appened")
+            l.append(int(line[-1]))
         elif insert in line:
-            print ("insert") 
+            #print ("insert") 
+            #l.insert(int(line[-1]),int(line[-3]))
+            tempList = line.split()
+            l.insert(int(line[-1]),int(line[-3]))
+            #change this to  a split and use that. 
         elif sort in line:
-            print ("sort") 
+            #print ("sort")
+            l.sort()
         elif pop in line:
-            print ("pop") 
+            #print ("pop") 
+            l.pop(0)
         elif reverse in line: 
-            print ("reverse")
+           # print ("reverse")
+           l.reverse()
         elif remove in line:
-            print ("remove") 
+            #print ("remove")
+            l.remove(int(line[-1]))
         elif "print" in line:
-            print ("print") 
+            #print ("print")
+            print (l)
         else:
             print ("something went wrong")
 
