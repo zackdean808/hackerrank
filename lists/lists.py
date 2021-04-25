@@ -18,12 +18,17 @@ if __name__ == '__main__':
 
         if append in line:
             #print ("appened")
-            l.append(int(line[-1]))
+            # Bug by getting string -1, this did not get double digits 
+            # Just grabbed the last element in the split string cast as int 
+            # then append 
+            tempList = line.split()
+            l.append(int(tempList[-1]))
+            tempList.clear()
         elif insert in line:
             #print ("insert") 
-            #l.insert(int(line[-1]),int(line[-3]))
             tempList = line.split()
             l.insert(int(tempList[1]),int(tempList[2]))
+            tempList.clear()
             #change this to  a split and use that. 
         elif sort in line:
             #print ("sort")
