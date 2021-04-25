@@ -1,4 +1,5 @@
 #!/bin/python
+# Solved! 
 if __name__ == '__main__':
     avg_total = 0.00 
     avg = 0.00 
