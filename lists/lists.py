@@ -23,14 +23,14 @@ if __name__ == '__main__':
             #print ("insert") 
             #l.insert(int(line[-1]),int(line[-3]))
             tempList = line.split()
-            l.insert(int(line[-1]),int(line[-3]))
+            l.insert(int(tempList[1]),int(tempList[2]))
             #change this to  a split and use that. 
         elif sort in line:
             #print ("sort")
             l.sort()
         elif pop in line:
             #print ("pop") 
-            l.pop(0)
+            l.pop(-1)
         elif reverse in line: 
            # print ("reverse")
            l.reverse()
