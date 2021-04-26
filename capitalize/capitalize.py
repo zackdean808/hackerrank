@@ -1,5 +1,5 @@
 #!/bin/python 
-
+#Solved 
 
 
 def solve(s):
@@ -10,11 +10,14 @@ def solve(s):
     # save string to list to string var ltos 
 
     t = []
-    splitStr = s.split()
+    splitStr = s.split(' ')
     for i in splitStr:
-        t.append(i.capitalize())
-        ltos = ' '.join(map(str, t))
-    return ltos 
+        try:
+            t.append(i.capitalize())
+        except: 
+            pass
+        ltos = ' '.join(map(str, t)) 
+    return ltos  
 
 if __name__ == '__main__':
     s = str(input())
