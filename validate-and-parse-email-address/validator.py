@@ -3,7 +3,7 @@
 import re
 
 def solve(s):
-    pattern = "\<[a-zA-Z]{1,}[a-zA-Z0-9-_.]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,3}\>"
+    pattern = "\<[a-zA-Z]{1,}[a-zA-Z0-9-_.]+@[a-zA-Z]+\.[a-zA-Z]{1,3}\>"
     tempStr = s.split()
     if re.match(pattern, tempStr[1]):
         print (tempStr[0], tempStr[1])
