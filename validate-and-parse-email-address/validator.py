@@ -1,5 +1,5 @@
 #!/bin/python 
-
+#Solved
 import re
 
 def solve(s):
